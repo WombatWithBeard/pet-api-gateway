@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Borod\.Rider2019.2\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\Borod\.Rider2019.2\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\Borod\.Rider2019.2\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\Borod\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Borod\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_PetApiGetway.-1850805101.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Borod\RiderProjects\PetApiGetway" t="IncludeFlat">
+    <e p="C:\Users\rusrob\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\rusrob\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_PetApiGetway.-1161243491.00" t="ExcludeRecursive" />
+    <e p="C:\Users\rusrob\RiderProjects\pet-api-gateway" t="IncludeFlat">
       <e p="Gateway" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -28,6 +25,32 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="IdentityServer" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Context" t="Include">
+          <e p="IdentityContext.cs" t="Include" />
+        </e>
+        <e p="Controllers" t="Include" />
+        <e p="IdentityServer.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="IdentityServer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="tempkey.jwk" t="Include" />
+        <e p="Utilities" t="Include">
+          <e p="Config.cs" t="Include" />
+        </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="PetApiGetway.sln" t="IncludeFlat" />

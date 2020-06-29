@@ -4,24 +4,24 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:1834",
-      "sslPort": 5000
+      "applicationUrl": "http://localhost:41214",
+      "sslPort": 44361
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "Gateway",
+      "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Gateway": {
+    "IdentityServer": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "Gateway",
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "launchUrl": "",
+      "applicationUrl": "https://localhost:6661;http://localhost:6660",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

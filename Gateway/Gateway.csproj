@@ -5,7 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Ocelot" Version="13.8.0" />
+      <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+      <PackageReference Include="Ocelot" Version="16.0.1" />
+      <PackageReference Include="Ocelot.Cache.CacheManager" Version="16.0.1" />
     </ItemGroup>
 
 

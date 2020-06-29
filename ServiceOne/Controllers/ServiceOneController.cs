@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -11,19 +12,21 @@ namespace ServiceOne.Controllers
     [Route("[controller]")]
     public class ServiceOneController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         private readonly ILogger<ServiceOneController> _logger;
 
         public ServiceOneController(ILogger<ServiceOneController> logger)
         {
             _logger = logger;
         }
-
+        
+        [Route("/secret")]
         [HttpGet]
+        [Authorize]
+        public string Secret()
+        {
+            return "Message from ApiOne";
+        }
+
         public string Get()
         {
             return "ServiceOne";

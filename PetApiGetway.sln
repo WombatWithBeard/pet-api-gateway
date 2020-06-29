@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTwo", "ServiceTwo\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway.csproj", "{B105B7A1-0776-4222-BC9D-589749E7BFBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{07A78001-5375-4325-B57F-8DDC874B6B07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B105B7A1-0776-4222-BC9D-589749E7BFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B105B7A1-0776-4222-BC9D-589749E7BFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B105B7A1-0776-4222-BC9D-589749E7BFBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A78001-5375-4325-B57F-8DDC874B6B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A78001-5375-4325-B57F-8DDC874B6B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A78001-5375-4325-B57F-8DDC874B6B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A78001-5375-4325-B57F-8DDC874B6B07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

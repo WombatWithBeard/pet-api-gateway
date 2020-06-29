@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -24,14 +26,24 @@ namespace Gateway
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var authkey = "TestKey";
+            Action<IdentityServerAuthenticationOptions> opt = o =>
+            {
+                o.Authority = "https://localhost:6661/";
+                o.ApiName = "SampleService";
+                o.SupportedTokens = SupportedTokens.Both;
+                o.RequireHttpsMetadata = false;
+            };
+
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(authkey, opt);
+
             services.AddControllers();
-            services.AddOcelot(Configuration);
+            services.AddOcelot(Configuration).AddCacheManager(x => { x.WithDictionaryHandle(); });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public async void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -43,7 +55,7 @@ namespace Gateway
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            // app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
             await app.UseOcelot();

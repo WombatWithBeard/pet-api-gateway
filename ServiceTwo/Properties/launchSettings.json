@@ -5,7 +5,7 @@
     "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:51926",
-      "sslPort": 7003
+      "sslPort": 6001
     }
   },
   "profiles": {
@@ -21,7 +21,7 @@
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "ServiceTwo",
-      "applicationUrl": "https://localhost:5001;http://localhost:7003",
+      "applicationUrl": "https://localhost:6001;http://localhost:6000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
