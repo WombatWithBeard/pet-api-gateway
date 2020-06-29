@@ -6,10 +6,10 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7001
+          "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/serviceOne-api/{catchAll}"
+      "UpstreamPathTemplate": "/serviceOne/{catchAll}"
     },
     {
       "DownstreamPathTemplate": "/{catchAll}",
@@ -17,10 +17,10 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7003
+          "Port": 4003
         }
       ],
-      "UpstreamPathTemplate": "/serviceTwo-api/{catchAll}"
+      "UpstreamPathTemplate": "/serviceTwo/{catchAll}"
     }
   ],
   "GlobalConfiguration": {

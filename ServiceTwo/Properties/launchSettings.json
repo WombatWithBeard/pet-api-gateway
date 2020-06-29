@@ -21,7 +21,7 @@
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "ServiceTwo",
-      "applicationUrl": "https://localhost:5001;http://localhost:7003",
+      "applicationUrl": "https://localhost:4001;http://localhost:7003",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
