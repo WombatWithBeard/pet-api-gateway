@@ -8,7 +8,12 @@
           "Host": "localhost",
           "Port": 3001
         }
+        
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      },
       "UpstreamPathTemplate": "/serviceOne/{catchAll}"
     },
     {
@@ -20,6 +25,10 @@
           "Port": 4003
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      },
       "UpstreamPathTemplate": "/serviceTwo/{catchAll}"
     }
   ],
