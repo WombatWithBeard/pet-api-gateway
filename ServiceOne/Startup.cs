@@ -24,11 +24,11 @@ namespace ServiceOne
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication("Bearer").AddJwtBearer("Bearer", config =>
-            {
-                config.Authority = "https://localhost:8001/";
-                config.Audience = "ApiOne";
-            });
+            // services.AddAuthentication("Bearer").AddJwtBearer("Bearer", config =>
+            // {
+            //     config.Authority = "https://localhost:8001/";
+            //     config.Audience = "ApiOne";
+            // });
             
             services.AddControllers();
         }
@@ -44,11 +44,11 @@ namespace ServiceOne
 
             app.UseRouting();
 
-            app.UseAuthentication();
+            // app.UseAuthentication();
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapDefaultControllerRoute(); });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }

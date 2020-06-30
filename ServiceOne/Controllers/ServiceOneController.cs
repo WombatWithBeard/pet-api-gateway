@@ -19,13 +19,13 @@ namespace ServiceOne.Controllers
             _logger = logger;
         }
 
-        [Route("/secret")]
-        [HttpGet]
-        [Authorize]
-        public string Secret()
-        {
-            return "Message from ApiOne";
-        }
+        // [Route("/secret")]
+        // [HttpGet]
+        // [Authorize]
+        // public string Secret()
+        // {
+        //     return "Message from ApiOne";
+        // }
         
         [HttpGet]
         public string Get()

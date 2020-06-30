@@ -28,7 +28,7 @@ namespace Gateway
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var authenticationProviderKey = "TestKey";
+            // var authenticationProviderKey = "TestKey";
             // Action<IdentityServerAuthenticationOptions> opt = o =>
             // {
             //     o.Authority = "https://localhost:8001";
@@ -37,16 +37,17 @@ namespace Gateway
             //     o.RequireHttpsMetadata = false;
             // };
 
-            services.AddAuthentication()
-                .AddJwtBearer(authenticationProviderKey, x =>
-                {
-                    x.Authority = "https://localhost:8001";
-                    x.RequireHttpsMetadata = false;
-                    x.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidAudiences = new [] {"ApiOne", "ApiTwo"}
-                    };
-                });
+            // services.AddAuthentication()
+            //     .AddJwtBearer(authenticationProviderKey, x =>
+            //     {
+            //         x.Authority = "https://localhost:8001";
+            //         x.Audience = "gateway";
+            //         x.RequireHttpsMetadata = false;
+            //         x.TokenValidationParameters = new TokenValidationParameters
+            //         {
+            //             ValidAudiences = new [] {"ApiOne", "ApiTwo"}
+            //         };
+            //     });
 
             services.AddControllers();
             services.AddOcelot(Configuration);
