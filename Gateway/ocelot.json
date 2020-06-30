@@ -1,7 +1,7 @@
 {
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -10,16 +10,20 @@
         }
         
       ],
-      "UpstreamPathTemplate": "/ServiceOne/{everything}",
+      "UpstreamPathTemplate": "/ServiceOne/{url}",
       "UpstreamHttpMethod": [
         "GET",
         "POST",
         "PUT",
         "DELETE"
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": ["ApiOne"]
+      }
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -27,13 +31,17 @@
           "Port": 4003
         }
       ],
-      "UpstreamPathTemplate": "/ServiceTwo/{everything}",
+      "UpstreamPathTemplate": "/ServiceTwo/{url}",
       "UpstreamHttpMethod": [
         "GET",
         "POST",
         "PUT",
         "DELETE"
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
     }
   ],
   "GlobalConfiguration": {

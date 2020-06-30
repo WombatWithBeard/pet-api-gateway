@@ -1,15 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace ServiceTwo
 {
@@ -26,7 +19,7 @@ namespace ServiceTwo
         {
             services.AddAuthentication("Bearer").AddJwtBearer("Bearer", config =>
             {
-                config.Authority = "https://localhost:8001/";
+                config.Authority = "https://localhost:4501/";
                 config.Audience = "ApiTwo";
             });
 
@@ -42,7 +35,7 @@ namespace ServiceTwo
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -50,7 +43,7 @@ namespace ServiceTwo
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapDefaultControllerRoute(); });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }
